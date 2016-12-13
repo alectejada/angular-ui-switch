@@ -6,6 +6,7 @@ angular.module('uiSwitch', [])
   , replace: true
   , transclude: true
   , template: function(element, attrs) {
+      attrs.disabled = attrs.disabled || attrs.ngDisabled;
       var html = '';
       html += '<span';
       html +=   ' class="switch' + (attrs.class ? ' ' + attrs.class : '') + '"';
